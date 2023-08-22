@@ -1,0 +1,25 @@
+@use "../02-tools/tools.index" as *;
+
+/*
+  General typography classes
+*/
+
+.u-type-align-center {
+  text-align: center;
+}
+
+.u-type-align-left {
+  text-align: left;
+}
+
+.u-type-align-right {
+  text-align: right;
+}
+
+.u-type-weight-medium {
+  font-weight: 500;
+}
+
+.u-type-weight-bold {
+  font-weight: 700;
+}
