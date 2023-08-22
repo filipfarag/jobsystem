@@ -69,7 +69,10 @@
 }
 
 // Final output
-@for $i from 1 through ceil(calc(($ending-rem-value - $starting-rem-value) / $rem-increment)) {
+@for $i
+  from 1
+  through ceil(calc(($ending-rem-value - $starting-rem-value) / $rem-increment))
+{
   $rem-value: $starting-rem-value + ($i - 1) * 0.25;
   @include margin-utility($rem-value);
   @include padding-utility($rem-value);
