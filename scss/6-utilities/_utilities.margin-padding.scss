@@ -1,4 +1,4 @@
-@use "../01-settings/settings.spacing" as *;
+@use "../1-variables/variables.spacing" as *;
 
 // Mixin to generate margin utility classes
 @mixin margin-utility($rem-value) {
