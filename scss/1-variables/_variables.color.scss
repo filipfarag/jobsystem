@@ -1,0 +1,47 @@
+/*
+  Every color is sorted from its darkest shade to its lightest shade.
+
+  1. Blue
+  2. Green
+  3. Red
+  4. Purple
+  5. Gray
+  6. Other
+*/
+
+:root {
+  // 1. Blue
+  --jsd-color-blue-800: hsl(215, 55%, 42%);
+  --jsd-color-blue-600: hsl(216, 58%, 52%);
+  --jsd-color-blue-500: hsl(216, 92%, 62%);
+  --jsd-color-blue-100: hsl(212, 87%, 94%);
+  --jsd-color-blue-50: hsl(212, 89%, 96%);
+
+  // 2. Green
+  --jsd-color-green-600: hsl(107, 50%, 41%);
+  --jsd-color-green-500: hsl(107, 53%, 51%);
+  --jsd-color-green-100: hsl(114, 54%, 93%);
+
+  // 3. Red
+  --jsd-color-red-900: hsl(357, 67%, 35%);
+  --jsd-color-red-500: hsl(359, 65%, 49%);
+  --jsd-color-red-100: hsl(348, 71%, 93%);
+
+  // 4. Purple
+  --jsd-color-purple-500: hsl(257, 47%, 49%);
+  --jsd-color-purple-100: hsl(257, 88%, 94%);
+
+  // 5. Gray
+  --jsd-color-gray-900: hsl(220, 8%, 15%);
+  --jsd-color-gray-600: hsl(224, 7%, 30%);
+  --jsd-color-gray-500: hsl(220, 9%, 54%);
+  --jsd-color-gray-400: hsl(219, 12%, 68%);
+  --jsd-color-gray-300: hsl(220, 15%, 81%);
+  --jsd-color-gray-200: hsl(220, 22%, 92%);
+  --jsd-color-gray-100: hsl(220, 21%, 95%);
+  --jsd-color-gray-50: hsl(216, 26%, 96%);
+
+  // 6. Other
+  --jsd-color-other-black: hsl(0, 0%, 0%);
+  --jsd-color-other-white: hsl(0, 0%, 100%);
+}
