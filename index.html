@@ -10,15 +10,53 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <title>Jobsystem</title>
+    <title>JobSystem</title>
   </head>
 
   <body>
-    <header>
-      <h1>Jobsystem</h1>
+    <header class="header">
+      <div class="header__inner">
+        <img
+          src="/assets/jobsystem-logo.svg"
+          alt="JobSystem Logo"
+          class="header__logo"
+        />
+        <nav class="nav">
+          <a class="nav__item nav__item--active"
+            ><span class="nav__label">Domů</span>
+            <div class="nav__underline"></div
+          ></a>
+          <a class="nav__item"
+            ><span class="nav__label">Nabídky práce</span>
+            <div class="nav__underline"></div
+          ></a>
+          <a class="nav__item"
+            ><span class="nav__label">Pro uchazeče</span>
+            <div class="nav__underline"></div
+          ></a>
+          <a class="nav__item"
+            ><span class="nav__label">Kontakt</span>
+            <div class="nav__underline"></div
+          ></a>
+        </nav>
+        <div class="header__buttons">
+          <button
+            class="jsd-button jsd-button--size-s jsd-button--variant-green"
+          >
+            <img src="/assets/iconset/plus.svg" alt="plus" />
+            <span>Chci inzerovat</span>
+          </button>
+          <button
+            class="jsd-button jsd-button--size-s jsd-button--variant-white"
+          >
+            <img src="/assets/iconset/user.svg" alt="user" />
+            <span>Přihlášení uchazeče</span>
+          </button>
+        </div>
+      </div>
     </header>
 
-    <main></main>
+    <main><div class="search-placeholder"></div></main>
 
     <footer></footer>
   </body>

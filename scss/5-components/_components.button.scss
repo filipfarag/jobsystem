@@ -1,0 +1,69 @@
+@use "../2-mixins/mixins.index" as *;
+
+@mixin solid-button {
+  color: var(--jsd-color-neutral-white);
+  fill: var(--jsd-color-neutral-white);
+}
+
+// Base styles
+.jsd-button {
+  @include flex-container;
+  border-radius: 0.25rem; // 4px
+  cursor: pointer;
+  font-size: 0.875rem; // 14px
+  font-weight: 500;
+  transition: background-color 150ms ease-in-out, border 200ms ease-in-out;
+}
+
+// Size - large
+.jsd-button--size-l {
+  gap: var(--jsd-space-12);
+  height: 3rem; // 48px
+  padding-inline: var(--jsd-space-32);
+}
+
+// Size - medium
+.jsd-button--size-m {
+  gap: var(--jsd-space-8);
+  height: 2.75rem; // 44px
+  padding-inline: var(--jsd-space-16);
+}
+
+// Size - small
+.jsd-button--size-s {
+  gap: var(--jsd-space-8);
+  height: 2.5rem; // 40px
+  padding-inline: var(--jsd-space-16);
+}
+
+// Variant - green
+.jsd-button--variant-green {
+  @include solid-button;
+  background-color: var(--jsd-color-green-500);
+
+  &:hover {
+    background-color: var(--jsd-color-green-600);
+  }
+}
+
+// Variant - blue
+.jsd-button--variant-blue {
+  @include solid-button;
+  background-color: var(--jsd-color-blue-500);
+
+  &:hover {
+    background-color: var(--jsd-color-blue-600);
+  }
+}
+
+// Variant - white
+.jsd-button--variant-white {
+  background-color: var(--jsd-color-neutral-white);
+  border: 0.0625rem solid var(--jsd-color-gray-300); // 1px
+  color: var(--jsd-color-gray-600);
+  fill: var(--jsd-color-gray-500);
+
+  &:hover {
+    border-color: var(--jsd-color-gray-500);
+  }
+}
