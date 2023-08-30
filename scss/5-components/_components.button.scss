@@ -15,6 +15,13 @@
   transition: background-color 150ms ease-in-out, border 200ms ease-in-out;
 }
 
+// Size - extra large
+.jsd-button--size-xl {
+  gap: var(--jsd-space-12);
+  height: 3.5rem; // 56px
+  padding-inline: var(--jsd-space-32);
+}
+
 // Size - large
 .jsd-button--size-l {
   gap: var(--jsd-space-12);

@@ -10,17 +10,18 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <title>JobSystem</title>
+    <title>Job System</title>
   </head>
 
   <body>
     <header class="header">
       <div class="header__inner">
-        <img
-          src="assets/jobsystem-logo.svg"
-          alt="JobSystem Logo"
-          class="header__logo"
-        />
+        <a href="">
+          <img
+            src="assets/jobsystem-logo.svg"
+            alt="JobSystem Logo"
+            class="header__logo"
+        /></a>
         <nav class="nav">
           <a class="nav__item nav__item--active"
             ><span class="nav__label">Domů</span>
@@ -64,7 +65,37 @@
       </div>
     </header>
 
-    <main><div class="search-placeholder"></div></main>
+    <main>
+      <div class="search">
+        <h1 class="search__heading">Hledám novou práci</h1>
+        <p class="search__facts">
+          Na <span class="u-type-weight-medium">Job System</span> je
+          registrováno <span class="u-type-weight-medium">71 437</span> uchazečů
+          a vystaveno <span class="u-type-link">47 738</span> nabídek práce
+        </p>
+        <section class="search__input-block">
+          <input
+            type="text"
+            name="position"
+            placeholder="Název pozice"
+            class="jsd-input"
+          />
+          <button
+            class="jsd-button jsd-button--size-xl jsd-button--variant-blue"
+          >
+            <img
+              src="assets/iconset/magnifier.svg"
+              alt="magnifier"
+              class="u-img-fill-white"
+            />
+            <span>Hledat práci</span>
+          </button>
+        </section>
+        <a href="" class="u-type-link u-type-link--regular"
+          >Rozšířené vyhledávání</a
+        >
+      </div>
+    </main>
 
     <footer></footer>
   </body>
