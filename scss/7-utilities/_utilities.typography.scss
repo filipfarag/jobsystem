@@ -25,11 +25,5 @@
 }
 
 .u-type-link {
-  color: var(--jsd-color-blue-500);
-  cursor: pointer;
-  text-decoration: underline;
-
-  &:hover {
-    color: var(--jsd-color-blue-600);
-  }
+  @include jsd-type-link;
 }

@@ -1,5 +1,6 @@
 @use "../2-mixins/mixins.index" as *;
 
+// Search panel
 .search {
   background-color: var(--jsd-color-blue-50);
   color: var(--jsd-color-gray-900);
@@ -24,4 +25,78 @@
 
 .search__advanced {
   @include jsd-type-h4-regular;
+  @include jsd-type-link;
+}
+
+// Top companies panel
+.top-companies-wrapper {
+  @include flex-container;
+}
+
+.top-companies {
+  @include flex-container($direction: column);
+  gap: var(--jsd-space-24);
+  padding-block: var(--jsd-space-32) var(--jsd-space-24);
+  text-align: center;
+
+  // TODO: Make it universal along with the .header__inner styles
+  margin-inline: 10rem; // 160px
+  max-width: 100%;
+  width: var(--content-width);
+
+  @media (max-width: 1299px) {
+    margin-inline: 5rem; // 160px
+  }
+}
+
+.top-companies__heading {
+  @include jsd-type-h2;
+  color: var(--jsd-color-gray-900);
+}
+
+.top-companies__grid {
+  @include flex-container($justify: space-between);
+  gap: var(--jsd-space-16);
+  width: 100%;
+}
+
+.company {
+  @include flex-container($direction: column);
+  gap: var(--jsd-space-8);
+  border: 0.0625rem solid var(--jsd-color-gray-300);
+  border-radius: var(--jsd-border-radius-4);
+  cursor: pointer;
+  height: 10.25rem; // 164px
+  padding: var(--jsd-space-16) var(--jsd-space-12);
+  transition: box-shadow 200ms ease-in-out;
+  width: 100%;
+
+  &:hover {
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.company__logo {
+  @include flex-container($grow: 1);
+  @include jsd-type-h1;
+  background: no-repeat center url("../../assets/company-placeholder.png");
+  height: 100%;
+  width: 100%;
+
+  &--last {
+    background: none;
+    color: var(--jsd-color-gray-500);
+  }
+}
+
+.company__offers {
+  @include jsd-type-body-14-regular;
+  color: var(--jsd-color-gray-600);
+  text-decoration: underline;
+}
+
+// Offers panel (placeholder)
+.offers {
+  background-color: lightgoldenrodyellow;
+  height: 500px;
 }

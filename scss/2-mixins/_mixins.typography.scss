@@ -3,6 +3,7 @@
   2. Body text - Regular
   3. Body text - Medium
   4. Paragraph text - Regular
+  5. Link
 */
 
 // 1. Heading
@@ -55,4 +56,15 @@
   font-size: var(--jsd-type-size-14);
   font-weight: 400;
   line-height: calc(24 / 14); // 24px
+}
+
+// 5. Link
+@mixin jsd-type-link {
+  color: var(--jsd-color-blue-500);
+  cursor: pointer;
+  text-decoration: underline;
+
+  &:hover {
+    color: var(--jsd-color-blue-600);
+  }
 }
