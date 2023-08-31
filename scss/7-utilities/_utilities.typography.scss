@@ -24,6 +24,57 @@
   font-weight: 700;
 }
 
-.u-type-link {
-  @include jsd-type-link;
+/*
+  JSD typography classes
+
+  1. Heading
+  2. Body text - Regular
+  3. Body text - Medium
+  4. Paragraph text - Regular
+  5. Link
+*/
+
+// 1. Heading
+.u-type-h1 {
+  @include jsd-type-h1;
+}
+
+.u-type-h2 {
+  @include jsd-type-h2;
+}
+
+.u-type-h3 {
+  @include jsd-type-h3;
+}
+
+.u-type-h4 {
+  @include jsd-type-h4;
+}
+
+.u-type-h4-regular {
+  @include jsd-type-h4-regular;
+}
+
+// 2. Body text - Regular
+.u-type-body-14-regular {
+  @include jsd-type-body-14-regular;
+}
+
+// 3. Body text - Medium
+.u-type-body-14-medium {
+  @include jsd-type-body-14-medium;
+}
+
+// 4. Paragraph text - Regular
+.u-type-paragraph-14-regular {
+  @include jsd-type-paragraph-14-regular;
+}
+
+// 5. Link
+.u-type-link-blue {
+  @include jsd-type-link-blue;
+}
+
+.u-type-link-gray {
+  @include jsd-type-link-gray;
 }

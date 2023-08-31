@@ -6,4 +6,13 @@
 .u-img-fill-grey-500 {
   filter: invert(62%) sepia(9%) saturate(533%) hue-rotate(182deg)
     brightness(84%) contrast(83%);
+
+  &--clickable {
+    cursor: pointer;
+
+    &:hover {
+      filter: invert(58%) sepia(46%) saturate(4032%) hue-rotate(194deg)
+        brightness(90%) contrast(104%);
+    }
+  }
 }

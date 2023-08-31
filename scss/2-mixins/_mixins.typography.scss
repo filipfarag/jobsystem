@@ -59,12 +59,25 @@
 }
 
 // 5. Link
-@mixin jsd-type-link {
-  color: var(--jsd-color-blue-500);
+@mixin link-base {
   cursor: pointer;
   text-decoration: underline;
+}
+
+@mixin jsd-type-link-blue {
+  @include link-base;
+  color: var(--jsd-color-blue-500);
 
   &:hover {
     color: var(--jsd-color-blue-600);
+  }
+}
+
+@mixin jsd-type-link-gray {
+  @include link-base;
+  color: var(--jsd-color-gray-600);
+
+  &:hover {
+    color: var(--jsd-color-gray-900);
   }
 }

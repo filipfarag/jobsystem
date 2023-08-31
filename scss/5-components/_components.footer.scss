@@ -1,0 +1,61 @@
+@use "../2-mixins/mixins.index" as *;
+
+.footer-wrapper {
+  @include flex-container;
+  background-color: var(--jsd-color-gray-50);
+}
+
+.footer {
+  @include flex-container($align: flex-start, $justify: space-between);
+  gap: var(--jsd-space-80);
+  padding-block: var(--jsd-space-64);
+
+  // TODO: Make it universal along with the .header__inner styles
+  margin-inline: 10rem; // 160px
+  max-width: 100%;
+  width: var(--content-width);
+
+  @media (max-width: 1299px) {
+    margin-inline: 5rem; // 160px
+  }
+}
+
+.footer__company {
+  @include flex-container($align: flex-start, $direction: column, $grow: 1);
+  color: var(--jsd-color-gray-600);
+}
+
+.footer__socials {
+  @include flex-container;
+  gap: var(--jsd-space-8);
+}
+
+.footer__container {
+  @include flex-container($align: flex-start, $direction: column);
+  gap: var(--jsd-space-8);
+}
+
+.footer__link-container {
+  @include flex-container($align: flex-start, $direction: column, $shrink: 0);
+  gap: var(--jsd-space-16);
+}
+
+.footer__heading {
+  @include jsd-type-h4;
+  color: var(--jsd-color-gray-900);
+}
+
+.footer__label {
+  @include jsd-type-body-14-medium;
+  color: var(--jsd-color-gray-900);
+}
+
+.footer__link {
+  @include jsd-type-body-14-regular;
+  @include jsd-type-link-gray;
+}
+
+.footer__data {
+  @include jsd-type-body-14-regular;
+  color: var(--jsd-color-gray-600);
+}
