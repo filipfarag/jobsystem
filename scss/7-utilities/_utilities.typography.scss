@@ -27,12 +27,7 @@
 .u-type-link {
   color: var(--jsd-color-blue-500);
   cursor: pointer;
-  font-weight: 500;
   text-decoration: underline;
-
-  &--regular {
-    font-weight: 400;
-  }
 
   &:hover {
     color: var(--jsd-color-blue-600);

@@ -8,10 +8,9 @@
 // Base styles
 .jsd-button {
   @include flex-container;
+  @include jsd-type-body-14-medium;
   border-radius: 0.25rem; // 4px
   cursor: pointer;
-  font-size: 0.875rem; // 14px
-  font-weight: 500;
   transition: background-color 150ms ease-in-out, border 200ms ease-in-out;
 }
 

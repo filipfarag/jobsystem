@@ -1,0 +1,58 @@
+/*
+  1. Heading
+  2. Body text - Regular
+  3. Body text - Medium
+  4. Paragraph text - Regular
+*/
+
+// 1. Heading
+@mixin jsd-type-h1 {
+  font-size: var(--jsd-type-size-32);
+  font-weight: 500;
+  line-height: calc(40 / 32); // 40px
+}
+
+@mixin jsd-type-h2 {
+  font-size: var(--jsd-type-size-24);
+  font-weight: 500;
+  line-height: calc(32 / 24); // 32px
+}
+
+@mixin jsd-type-h3 {
+  font-size: var(--jsd-type-size-20);
+  font-weight: 500;
+  line-height: calc(24 / 20); // 24px
+}
+
+@mixin jsd-type-h4 {
+  font-size: var(--jsd-type-size-16);
+  font-weight: 500;
+  line-height: calc(24 / 16); // 24px
+}
+
+@mixin jsd-type-h4-regular {
+  font-size: var(--jsd-type-size-16);
+  font-weight: 400;
+  line-height: calc(24 / 16); // 24px
+}
+
+// 2. Body text - Regular
+@mixin jsd-type-body-14-regular {
+  font-size: var(--jsd-type-size-14);
+  font-weight: 400;
+  line-height: calc(16 / 14); // 16px
+}
+
+// 3. Body text - Medium
+@mixin jsd-type-body-14-medium {
+  font-size: var(--jsd-type-size-14);
+  font-weight: 500;
+  line-height: calc(16 / 14); // 16px
+}
+
+// 4. Paragraph text - Regular
+@mixin jsd-type-paragraph-14-regular {
+  font-size: var(--jsd-type-size-14);
+  font-weight: 400;
+  line-height: calc(24 / 14); // 24px
+}

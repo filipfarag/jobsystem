@@ -1,0 +1,27 @@
+@use "../2-mixins/mixins.index" as *;
+
+.search {
+  background-color: var(--jsd-color-blue-50);
+  color: var(--jsd-color-gray-900);
+  padding-block: var(--jsd-space-56) var(--jsd-space-32);
+  text-align: center;
+}
+
+.search__heading {
+  @include jsd-type-h1;
+}
+
+.search__facts {
+  @include jsd-type-h4-regular;
+  margin-top: var(--jsd-space-16);
+}
+
+.search__input-block {
+  @include flex-container;
+  gap: var(--jsd-space-12);
+  padding-block: var(--jsd-space-24);
+}
+
+.search__advanced {
+  @include jsd-type-h4-regular;
+}
