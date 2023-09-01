@@ -66,33 +66,48 @@
     </header>
 
     <main>
-      <section class="search">
-        <h1 class="search__heading">Hledám novou práci</h1>
-        <p class="search__facts">
-          Na <span class="u-type-weight-medium">Job System</span> je
-          registrováno <span class="u-type-weight-medium">71 437</span> uchazečů
-          a vystaveno <span class="u-type-link-blue">47 738</span> nabídek práce
-        </p>
-        <section class="search__input-block">
-          <input
-            type="text"
-            name="position"
-            placeholder="Název pozice"
-            class="jsd-input"
-          />
-          <button
-            class="jsd-button jsd-button--size-xl jsd-button--variant-blue"
-          >
-            <img
-              src="assets/iconset/magnifier.svg"
-              alt="magnifier"
-              class="u-img-fill-white"
+      <div class="search-wrapper">
+        <section class="search">
+          <h1 class="search__heading">Hledám novou práci</h1>
+          <p class="search__facts">
+            Na <span class="u-type-weight-medium">Job System</span> je
+            registrováno
+            <span class="u-type-weight-medium">71 437</span> uchazečů a
+            vystaveno <span class="u-type-link-blue">47 738</span> nabídek práce
+          </p>
+          <section class="search__input-block">
+            <input
+              type="text"
+              name="position"
+              placeholder="Název pozice"
+              class="jsd-input"
             />
-            <span>Hledat práci</span>
-          </button>
+            <select name="" id="" class="jsd-select">
+              <option value="0" disabled selected>Obor práce</option>
+              <option value="1">Obor 1</option>
+              <option value="2">Obor 2</option>
+              <option value="2">Obor 3</option>
+            </select>
+            <select name="" id="" class="jsd-select">
+              <option value="0" disabled selected>Kraj</option>
+              <option value="1">Kraj 1</option>
+              <option value="2">Kraj 2</option>
+              <option value="2">Kraj 3</option>
+            </select>
+            <button
+              class="jsd-button jsd-button--size-xl jsd-button--variant-blue"
+            >
+              <img
+                src="assets/iconset/magnifier.svg"
+                alt="magnifier"
+                class="u-img-fill-white"
+              />
+              <span>Hledat práci</span>
+            </button>
+          </section>
+          <a href="" class="search__advanced">Rozšířené vyhledávání</a>
         </section>
-        <a href="" class="search__advanced">Rozšířené vyhledávání</a>
-      </section>
+      </div>
       <section class="top-companies-wrapper">
         <div class="top-companies">
           <h2 class="top-companies__heading">Největší zaměstnavatelé</h2>

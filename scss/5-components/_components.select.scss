@@ -1,0 +1,16 @@
+@use "../2-mixins/mixins.index" as *;
+
+.jsd-select {
+  @include jsd-type-body-14-regular;
+  border: 0.0625rem solid var(--jsd-color-gray-300); // 1px
+  border-radius: var(--jsd-border-radius-4);
+  color: var(--jsd-color-gray-900);
+  height: 3.5rem;
+  padding-inline: var(--jsd-space-16);
+  transition: border 100ms ease-in-out, box-shadow 100ms ease-in-out;
+
+  &:focus-visible {
+    border-color: var(--jsd-color-blue-500);
+    box-shadow: 0 0 0 0.1875rem rgba(69, 140, 247, 20%); // 3px, Blue 500 color with opacity
+  }
+}
