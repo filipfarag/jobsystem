@@ -1,18 +1,17 @@
+@use "../2-mixins/mixins.index" as *;
+
 .u-img-fill-white {
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(224deg)
-    brightness(105%) contrast(101%);
+  @include icon-fill-white;
 }
 
 .u-img-fill-grey-500 {
-  filter: invert(62%) sepia(9%) saturate(533%) hue-rotate(182deg)
-    brightness(84%) contrast(83%);
+  @include icon-fill-gray-500;
 
   &--clickable {
     cursor: pointer;
 
     &:hover {
-      filter: invert(58%) sepia(46%) saturate(4032%) hue-rotate(194deg)
-        brightness(90%) contrast(104%);
+      @include icon-fill-blue-500;
     }
   }
 }

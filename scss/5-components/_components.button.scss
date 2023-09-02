@@ -3,6 +3,10 @@
 @mixin solid-button {
   color: var(--jsd-color-neutral-white);
   fill: var(--jsd-color-neutral-white);
+
+  img {
+    @include icon-fill-white;
+  }
 }
 
 // Base styles
@@ -77,6 +81,10 @@
 
     &:hover {
       border-color: var(--jsd-color-gray-400);
+    }
+
+    img {
+      @include icon-fill-gray-500;
     }
   }
 }

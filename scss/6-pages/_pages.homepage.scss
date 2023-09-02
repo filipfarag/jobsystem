@@ -1,5 +1,9 @@
 @use "../2-mixins/mixins.index" as *;
 
+:root {
+  --offer-border: 0.0625rem solid var(--jsd-color-gray-300); // 1px
+}
+
 // Search panel
 .search-wrapper {
   @include flex-container;
@@ -114,8 +118,72 @@
   text-decoration: underline;
 }
 
-// Offers panel (placeholder)
+// Offers panel
+.offers-wrapper {
+  @include flex-container;
+}
+
 .offers {
-  background-color: lightgoldenrodyellow;
-  height: 500px;
+  @include flex-container($direction: column);
+  gap: var(--jsd-space-24);
+  padding-block: var(--jsd-space-24) var(--jsd-space-56);
+
+  // TODO: Make it universal along with the .header__inner styles
+  margin-inline: 10rem; // 160px
+  max-width: 100%;
+  width: var(--content-width);
+
+  @media (max-width: 1299px) {
+    margin-inline: 5rem; // 160px
+  }
+}
+
+.offers__heading {
+  @include jsd-type-h2;
+  color: var(--jsd-color-gray-900);
+  text-align: center;
+}
+
+.offers__container {
+  @include flex-container($direction: column);
+  width: 100%;
+}
+
+.offer {
+  @include flex-container($direction: column);
+  gap: var(--jsd-space-8);
+  border-top: var(--offer-border);
+  padding-block: var(--jsd-space-24);
+  width: 100%;
+
+  &:last-of-type {
+    border-bottom: var(--offer-border);
+  }
+}
+
+.offer__row {
+  @include flex-container;
+  gap: var(--jsd-space-8);
+  width: 100%;
+}
+
+.offer__position {
+  @include jsd-type-h3;
+  color: var(--jsd-color-gray-900);
+
+  &:hover {
+    color: var(--jsd-color-blue-500);
+  }
+}
+
+.offer__salary {
+  @include jsd-type-h4;
+  color: var(--jsd-color-gray-900);
+  margin-left: auto;
+}
+
+.offer__date {
+  @include jsd-type-body-14-regular;
+  color: var(--jsd-color-gray-500);
+  margin-left: auto;
 }
