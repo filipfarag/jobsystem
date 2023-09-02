@@ -6,23 +6,68 @@
 }
 
 .footer {
-  @include flex-container($align: flex-start, $justify: space-between);
+  display: grid;
+  grid-template-columns: 1fr repeat(3, auto);
+  align-items: flex-start;
+  justify-content: space-between;
   gap: var(--jsd-space-80);
   padding-block: var(--jsd-space-64);
 
   // TODO: Make it universal along with the .header__inner styles
-  margin-inline: 10rem; // 160px
+  margin-inline: 9rem; // 160px
+  padding-inline: 1rem;
   max-width: 100%;
   width: var(--content-width);
 
-  @media (max-width: 1299px) {
+  @media (max-width: 1300px) {
     margin-inline: 5rem; // 160px
+  }
+
+  @media (max-width: 1300px) {
+    gap: var(--jsd-space-64);
+  }
+
+  @media (max-width: 980px) {
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
+  }
+
+  @media (max-width: 830px) {
+    margin-inline: 2.5rem; // 40px
+  }
+
+  @media (max-width: 700px) {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
+    grid-row-gap: var(--jsd-space-40);
+  }
+
+  @media (max-width: 500px) {
+    margin-inline: 1rem;
+    grid-column-gap: var(--jsd-space-16);
+    grid-row-gap: var(--jsd-space-40);
+  }
+
+  @media (max-width: 400px) {
+    margin-inline: 0;
   }
 }
 
 .footer__company {
-  @include flex-container($align: flex-start, $direction: column, $grow: 1);
+  @include flex-container($align: flex-start, $direction: column);
   color: var(--jsd-color-gray-600);
+
+  @media (max-width: 980px) {
+    align-items: center;
+    grid-column: 1/4;
+    order: 1;
+    text-align: center;
+  }
+
+  @media (max-width: 700px) {
+    grid-column: 1/3;
+    margin-top: var(--jsd-space-32);
+  }
 }
 
 .footer__socials {
@@ -38,6 +83,26 @@
 .footer__link-container {
   @include flex-container($align: flex-start, $direction: column, $shrink: 0);
   gap: var(--jsd-space-16);
+}
+
+.footer__link-container--contact {
+  @media (max-width: 700px) {
+    align-items: center;
+    grid-column: 1/3;
+  }
+
+  .footer__container {
+    @media (max-width: 700px) {
+      align-items: center;
+    }
+  }
+}
+
+.footer__link-container--employers {
+  @media (max-width: 700px) {
+    align-items: flex-end;
+    text-align: right;
+  }
 }
 
 .footer__heading {

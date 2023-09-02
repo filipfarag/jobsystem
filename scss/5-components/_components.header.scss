@@ -12,12 +12,18 @@
 .header__inner {
   @include flex-container;
   height: var(--nav-height);
-  margin-inline: 10rem; // 160px
+  margin-inline: 9rem; // 160px
+  padding-inline: 1rem;
   max-width: 100%;
   width: var(--content-width);
 
-  @media (max-width: 1299px) {
+  @media (max-width: 1300px) {
     margin-inline: 5rem; // 160px
+  }
+
+  // TEMPORARY
+  @media (max-width: 1160px) {
+    display: none;
   }
 }
 

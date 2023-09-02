@@ -16,17 +16,26 @@
   text-align: center;
 
   // TODO: Make it universal along with the .header__inner styles
-  margin-inline: 10rem; // 160px
+  margin-inline: 9rem; // 160px
+  padding-inline: 1rem;
   max-width: 100%;
   width: var(--content-width);
 
   @media (max-width: 1299px) {
     margin-inline: 5rem; // 160px
   }
+
+  @media (max-width: 830px) {
+    margin-inline: 0;
+  }
 }
 
 .search__heading {
   @include jsd-type-h1;
+
+  @media (max-width: 460px) {
+    @include jsd-type-h2;
+  }
 }
 
 .search__facts {
@@ -40,6 +49,32 @@
   justify-content: space-between;
   gap: var(--jsd-space-12);
   padding-block: var(--jsd-space-24);
+
+  @media (max-width: 830px) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+
+  @media (max-width: 460px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+  }
+}
+
+.search__input {
+  @media (max-width: 460px) {
+    grid-column: 1/3;
+  }
+}
+
+.search__button {
+  @media (max-width: 830px) {
+    grid-column: 1/4;
+  }
+
+  @media (max-width: 460px) {
+    grid-column: 1/3;
+  }
 }
 
 .search__advanced {
@@ -59,12 +94,17 @@
   text-align: center;
 
   // TODO: Make it universal along with the .header__inner styles
-  margin-inline: 10rem; // 160px
+  margin-inline: 9rem; // 160px
+  padding-inline: 1rem;
   max-width: 100%;
   width: var(--content-width);
 
   @media (max-width: 1299px) {
     margin-inline: 5rem; // 160px
+  }
+
+  @media (max-width: 830px) {
+    margin-inline: 0;
   }
 }
 
@@ -74,9 +114,21 @@
 }
 
 .top-companies__grid {
-  @include flex-container($justify: space-between);
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-content: space-between;
   gap: var(--jsd-space-16);
   width: 100%;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  @media (max-width: 460px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
 }
 
 .company {
@@ -129,12 +181,17 @@
   padding-block: var(--jsd-space-24) var(--jsd-space-56);
 
   // TODO: Make it universal along with the .header__inner styles
-  margin-inline: 10rem; // 160px
+  margin-inline: 9rem; // 160px
+  padding-inline: 1rem;
   max-width: 100%;
   width: var(--content-width);
 
   @media (max-width: 1299px) {
     margin-inline: 5rem; // 160px
+  }
+
+  @media (max-width: 830px) {
+    margin-inline: 0;
   }
 }
 
@@ -150,6 +207,7 @@
 }
 
 .offer {
+  position: relative;
   @include flex-container($direction: column);
   gap: var(--jsd-space-8);
   border-top: var(--offer-border);
@@ -161,10 +219,45 @@
   }
 }
 
-.offer__row {
-  @include flex-container;
+.offer__first-row {
+  display: grid;
+  grid-template-columns: min-content 1fr auto;
+  align-items: center;
   gap: var(--jsd-space-8);
   width: 100%;
+
+  @media (max-width: 830px) {
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: repeat(2, auto);
+  }
+}
+
+.offer__second-row {
+  @include flex-container($justify: flex-start);
+  gap: var(--jsd-space-8);
+  overflow-x: auto;
+  width: 100%;
+
+  @media (max-width: 1024px) {
+    padding-right: 2rem;
+  }
+}
+
+.offer__badge-gradient {
+  display: none;
+
+  @media (max-width: 1024px) {
+    position: absolute;
+    right: 0;
+    display: initial;
+    height: 1.75rem;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgb(255, 255, 255) 100%
+    );
+    width: 2rem;
+  }
 }
 
 .offer__position {
@@ -174,16 +267,33 @@
   &:hover {
     color: var(--jsd-color-blue-500);
   }
+
+  @media (max-width: 1024px) {
+    @include jsd-type-h4;
+  }
 }
 
 .offer__salary {
   @include jsd-type-h4;
   color: var(--jsd-color-gray-900);
+  flex-shrink: 0;
   margin-left: auto;
+  text-align: right;
+
+  @media (max-width: 830px) {
+    grid-column: 1/3;
+    margin-left: initial;
+    text-align: initial;
+  }
 }
 
 .offer__date {
   @include jsd-type-body-14-regular;
   color: var(--jsd-color-gray-500);
   margin-left: auto;
+
+  @media (max-width: 1024px) {
+    order: -1;
+    margin-left: initial;
+  }
 }
