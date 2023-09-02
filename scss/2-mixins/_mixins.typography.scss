@@ -2,8 +2,9 @@
   1. Heading
   2. Body text - Regular
   3. Body text - Medium
-  4. Paragraph text - Regular
-  5. Link
+  4. Body text - Bold
+  5. Paragraph text - Regular
+  6. Link
 */
 
 // 1. Heading
@@ -51,14 +52,21 @@
   line-height: calc(16 / 14); // 16px
 }
 
-// 4. Paragraph text - Regular
+// 3. Body text - Bold
+@mixin jsd-type-body-12-bold {
+  font-size: var(--jsd-type-size-12);
+  font-weight: 700;
+  line-height: calc(16 / 12); // 16px
+}
+
+// 5. Paragraph text - Regular
 @mixin jsd-type-paragraph-14-regular {
   font-size: var(--jsd-type-size-14);
   font-weight: 400;
   line-height: calc(24 / 14); // 24px
 }
 
-// 5. Link
+// 6. Link
 @mixin link-base {
   cursor: pointer;
   text-decoration: underline;

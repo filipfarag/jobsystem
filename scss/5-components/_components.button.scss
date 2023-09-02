@@ -15,62 +15,68 @@
   white-space: nowrap;
 }
 
-// Size - extra large
-.jsd-button--size-xl {
-  gap: var(--jsd-space-12);
-  height: 3.5rem; // 56px
-  padding-inline: var(--jsd-space-32);
-}
+// Sizes
+.jsd-button {
+  // Extra Large
+  &--size-xl {
+    gap: var(--jsd-space-12);
+    height: 3.5rem; // 56px
+    padding-inline: var(--jsd-space-32);
+  }
 
-// Size - large
-.jsd-button--size-l {
-  gap: var(--jsd-space-12);
-  height: 3rem; // 48px
-  padding-inline: var(--jsd-space-32);
-}
+  // Large
+  &--size-l {
+    gap: var(--jsd-space-12);
+    height: 3rem; // 48px
+    padding-inline: var(--jsd-space-32);
+  }
 
-// Size - medium
-.jsd-button--size-m {
-  gap: var(--jsd-space-8);
-  height: 2.75rem; // 44px
-  padding-inline: var(--jsd-space-16);
-}
+  // Medium
+  &--size-m {
+    gap: var(--jsd-space-8);
+    height: 2.75rem; // 44px
+    padding-inline: var(--jsd-space-16);
+  }
 
-// Size - small
-.jsd-button--size-s {
-  gap: var(--jsd-space-8);
-  height: 2.5rem; // 40px
-  padding-inline: var(--jsd-space-16);
-}
-
-// Variant - green
-.jsd-button--variant-green {
-  @include solid-button;
-  background-color: var(--jsd-color-green-500);
-
-  &:hover {
-    background-color: var(--jsd-color-green-600);
+  // Small
+  &--size-s {
+    gap: var(--jsd-space-8);
+    height: 2.5rem; // 40px
+    padding-inline: var(--jsd-space-16);
   }
 }
 
-// Variant - blue
-.jsd-button--variant-blue {
-  @include solid-button;
-  background-color: var(--jsd-color-blue-500);
+// Color Variants
+.jsd-button {
+  // Green
+  &--color-green {
+    @include solid-button;
+    background-color: var(--jsd-color-green-500);
 
-  &:hover {
-    background-color: var(--jsd-color-blue-600);
+    &:hover {
+      background-color: var(--jsd-color-green-600);
+    }
   }
-}
 
-// Variant - white
-.jsd-button--variant-white {
-  background-color: var(--jsd-color-neutral-white);
-  border: 0.0625rem solid var(--jsd-color-gray-300); // 1px
-  color: var(--jsd-color-gray-600);
-  fill: var(--jsd-color-gray-500);
+  // Blue
+  &--color-blue {
+    @include solid-button;
+    background-color: var(--jsd-color-blue-500);
 
-  &:hover {
-    border-color: var(--jsd-color-gray-400);
+    &:hover {
+      background-color: var(--jsd-color-blue-600);
+    }
+  }
+
+  // White
+  &--color-white {
+    background-color: var(--jsd-color-neutral-white);
+    border: 0.0625rem solid var(--jsd-color-gray-300); // 1px
+    color: var(--jsd-color-gray-600);
+    fill: var(--jsd-color-gray-500);
+
+    &:hover {
+      border-color: var(--jsd-color-gray-400);
+    }
   }
 }
