@@ -44,7 +44,7 @@
   }
 
   &--active {
-    transition: transform 200ms ease-in-out;
+    transition: transform 300ms ease-in-out;
   }
 }
 
@@ -59,7 +59,7 @@
     height: initial;
     margin-inline: 0;
     padding-block: var(--jsd-space-28);
-    transform: translateY(-100%);
+    transform: translateY(-125%);
 
     &--visible {
       transform: translateY(0%);
