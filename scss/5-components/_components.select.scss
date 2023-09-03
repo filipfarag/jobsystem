@@ -26,4 +26,5 @@
   right: var(--jsd-space-16);
   @include center-y;
   @include icon-fill-gray-500;
+  pointer-events: none;
 }
