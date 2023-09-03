@@ -155,7 +155,7 @@
 .company__logo {
   @include flex-container($grow: 1);
   @include jsd-type-h1;
-  background: no-repeat center url("../../assets/company-placeholder.png");
+  background: no-repeat center url("/assets/company-placeholder.png");
   height: 100%;
   width: 100%;
 
