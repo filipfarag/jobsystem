@@ -232,6 +232,7 @@
   @include flex-container($justify: flex-start);
   gap: var(--jsd-space-8);
   overflow-x: auto;
+  scrollbar-width: none;
   width: 100%;
 
   &::-webkit-scrollbar {

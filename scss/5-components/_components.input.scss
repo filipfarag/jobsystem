@@ -8,6 +8,7 @@
   height: 3.5rem;
   padding-inline: var(--jsd-space-16);
   transition: border 100ms ease-in-out, box-shadow 100ms ease-in-out;
+  -webkit-appearance: none;
 
   &::placeholder {
     color: var(--jsd-color-gray-500);
