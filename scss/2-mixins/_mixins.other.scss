@@ -62,3 +62,8 @@
   filter: invert(9%) sepia(52%) saturate(6314%) hue-rotate(340deg)
     brightness(117%) contrast(113%);
 }
+
+// TODO
+// Focus outline (used on buttons and all input types)
+@mixin element-focus {
+}
