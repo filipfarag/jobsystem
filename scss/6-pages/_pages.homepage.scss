@@ -202,11 +202,16 @@
   @include flex-container($direction: column);
   gap: var(--jsd-space-8);
   border-top: var(--offer-border);
+  cursor: pointer;
   padding-block: var(--jsd-space-24);
   width: 100%;
 
   &:last-of-type {
     border-bottom: var(--offer-border);
+  }
+
+  &:hover .offer__position {
+    color: var(--jsd-color-blue-500);
   }
 }
 
@@ -257,10 +262,6 @@
 .offer__position {
   @include jsd-type-h3;
   color: var(--jsd-color-gray-900);
-
-  &:hover {
-    color: var(--jsd-color-blue-500);
-  }
 
   @media (max-width: 1024px) {
     @include jsd-type-h4;
