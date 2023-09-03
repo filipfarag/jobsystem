@@ -221,11 +221,13 @@
 
 .offer__first-row {
   @include flex-container($justify: flex-start, $wrap: wrap);
-  gap: var(--jsd-space-8);
+  gap: var(--jsd-space-4);
   width: 100%;
+}
 
-  @media (max-width: 830px) {
-  }
+.offer__first-line {
+  @include flex-container;
+  gap: var(--jsd-space-8);
 }
 
 .offer__second-row {
