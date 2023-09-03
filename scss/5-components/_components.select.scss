@@ -6,6 +6,7 @@
 
 .jsd-select__input {
   @include jsd-type-body-14-regular;
+  background-color: var(--jsd-color-neutral-white);
   border: 0.0625rem solid var(--jsd-color-gray-300); // 1px
   border-radius: var(--jsd-border-radius-4);
   color: var(--jsd-color-gray-900);
