@@ -236,9 +236,15 @@
   &::-webkit-scrollbar {
     display: none;
   }
+}
+
+.offer__badges {
+  @include flex-container($justify: flex-start, $wrap: wrap);
+  gap: var(--jsd-space-8);
 
   @media (max-width: 1024px) {
-    padding-right: 2rem;
+    flex-wrap: nowrap;
+    padding-right: var(--jsd-space-32);
   }
 }
 
