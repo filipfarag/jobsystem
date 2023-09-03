@@ -229,18 +229,18 @@
 .offer__second-row {
   @include flex-container($justify: flex-start);
   gap: var(--jsd-space-8);
-  overflow-x: auto;
-  scrollbar-width: none;
   width: 100%;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
 }
 
 .offer__badges {
   @include flex-container($justify: flex-start, $wrap: wrap);
   gap: var(--jsd-space-8);
+  overflow-x: auto;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   @media (max-width: 1024px) {
     flex-wrap: nowrap;
