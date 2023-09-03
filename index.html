@@ -14,8 +14,14 @@
   </head>
 
   <body>
-    <header class="header">
-      <div class="header__inner">
+    <header class="header header--desktop">
+      <div class="header__inner" id="header__inner">
+        <img
+          src="assets/iconset/plus.svg"
+          alt="Close Menu"
+          class="header__close-menu"
+          onclick="closeNav()"
+        />
         <a href="">
           <img
             src="assets/jobsystem-logo.svg"
@@ -51,6 +57,20 @@
           </button>
         </div>
       </div>
+    </header>
+    <header class="header header--mobile">
+      <a href="">
+        <img
+          src="assets/jobsystem-logo.svg"
+          alt="JobSystem Logo"
+          class="header__logo"
+      /></a>
+      <img
+        src="assets/iconset/plus.svg"
+        alt="Menu"
+        class="header__burger"
+        onclick="openNav()"
+      />
     </header>
 
     <main>
@@ -251,5 +271,6 @@
         </div>
       </section>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

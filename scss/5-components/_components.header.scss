@@ -1,12 +1,32 @@
 @use "../2-mixins/mixins.index" as *;
 
-// Header styles
 .header {
   position: sticky;
   top: 0;
   @include flex-container;
+  box-shadow: 0px 10px 10px -15px rgba(0, 0, 0, 0.6);
   background-color: var(--jsd-color-neutral-white);
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.header--desktop {
+  z-index: 1;
+}
+
+.header--mobile {
+  height: var(--nav-height);
+  justify-content: space-between;
+
+  @media (max-width: 1300px) {
+    padding-inline: 6rem; // 160px
+  }
+
+  @media (min-width: 1170px) {
+    display: none;
+  }
+
+  @media (max-width: 830px) {
+    padding-inline: 1rem;
+  }
 }
 
 .header__inner {
@@ -21,9 +41,60 @@
     margin-inline: 5rem; // 160px
   }
 
-  // TEMPORARY
-  @media (max-width: 1160px) {
-    display: none;
+  &--active {
+    transition: transform 200ms ease-in-out;
+  }
+}
+
+// Responsive header styles
+.header__inner {
+  @media (max-width: 1169px) {
+    position: absolute;
+    top: 0;
+    align-items: flex-end;
+    background-color: var(--jsd-color-neutral-white);
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    height: initial;
+    margin-inline: 0;
+    padding-block: var(--jsd-space-28);
+    transform: translateY(-100%);
+
+    &--visible {
+      transform: translateY(0%);
+    }
+
+    .nav {
+      align-self: center;
+      flex-direction: column;
+      gap: var(--jsd-space-32);
+      margin: var(--jsd-space-32) 0;
+    }
+
+    .nav__item {
+      height: initial;
+    }
+
+    .nav__label {
+      @include jsd-type-h3;
+    }
+
+    .nav__underline {
+      opacity: 0;
+    }
+
+    .header__logo {
+      display: none;
+    }
+
+    .header__buttons {
+      margin-left: initial;
+      width: 100%;
+
+      > * {
+        width: 100%;
+      }
+    }
   }
 }
 
@@ -31,10 +102,20 @@
   width: 8.25rem; // 132px
 }
 
+.header__close-menu {
+  @media (min-width: 1170px) {
+    display: none;
+  }
+}
+
 .header__buttons {
   @include flex-container($shrink: 0);
   gap: var(--jsd-space-16);
   margin-left: var(--jsd-space-32);
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
 }
 
 // Navigation inside header
