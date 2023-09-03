@@ -155,7 +155,6 @@
 .company__logo {
   @include flex-container($grow: 1);
   @include jsd-type-h1;
-  background: no-repeat center url("/assets/company-placeholder.png");
   height: 100%;
   width: 100%;
 
@@ -221,15 +220,11 @@
 }
 
 .offer__first-row {
-  display: grid;
-  grid-template-columns: min-content 1fr auto;
-  align-items: center;
+  @include flex-container($justify: flex-start, $wrap: wrap);
   gap: var(--jsd-space-8);
   width: 100%;
 
   @media (max-width: 830px) {
-    grid-template-columns: min-content 1fr;
-    grid-template-rows: repeat(2, auto);
   }
 }
 
@@ -238,6 +233,10 @@
   gap: var(--jsd-space-8);
   overflow-x: auto;
   width: 100%;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   @media (max-width: 1024px) {
     padding-right: 2rem;
@@ -279,12 +278,9 @@
   color: var(--jsd-color-gray-900);
   flex-shrink: 0;
   margin-left: auto;
-  text-align: right;
 
   @media (max-width: 830px) {
-    grid-column: 1/3;
-    margin-left: initial;
-    text-align: initial;
+    flex-basis: 100%;
   }
 }
 
