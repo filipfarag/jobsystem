@@ -70,6 +70,10 @@
 @mixin link-base {
   cursor: pointer;
   text-decoration: underline;
+
+  &:hover {
+    text-decoration: initial;
+  }
 }
 
 @mixin jsd-type-link-blue {

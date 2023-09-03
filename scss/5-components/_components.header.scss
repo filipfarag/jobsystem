@@ -5,7 +5,6 @@
   top: 0;
   @include flex-container;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.06);
-
   background-color: var(--jsd-color-neutral-white);
 }
 
@@ -55,10 +54,10 @@
     top: 0;
     align-items: flex-end;
     background-color: var(--jsd-color-neutral-white);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.06);
     flex-direction: column;
     height: initial;
-    margin-inline: 0;
-    padding-block: var(--jsd-space-28);
+    padding: var(--jsd-space-28) var(--jsd-space-96);
     transform: translateY(-125%);
 
     &--visible {
@@ -99,6 +98,12 @@
   }
 }
 
+.header__inner {
+  @media (max-width: 830px) {
+    padding-inline: 1rem;
+  }
+}
+
 .header__logo {
   width: 8.25rem; // 132px
 }
@@ -132,6 +137,10 @@
   @include jsd-type-h4;
   cursor: pointer;
   height: var(--nav-height);
+
+  &:hover .nav__label {
+    color: var(--jsd-color-blue-500);
+  }
 }
 
 .nav__label {
