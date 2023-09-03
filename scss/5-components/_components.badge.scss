@@ -5,7 +5,6 @@
   @include flex-container($shrink: 0);
   gap: var(--jsd-space-4);
   border-radius: var(--jsd-border-radius-4);
-  cursor: default;
   transition: border 100ms ease-in-out, box-shadow 100ms ease-in-out;
 }
 
